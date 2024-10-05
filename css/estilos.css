@@ -10,3 +10,13 @@
 nav li {
 	text-align: center;
 }
+
+.componente {
+	padding: 20px 0;
+	margin: 10px 0;
+	background-color: white;
+
+	display: flex;
+	justify-content: center;
+	gap: px;
+}
