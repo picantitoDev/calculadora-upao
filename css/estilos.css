@@ -15,8 +15,25 @@ nav li {
 	padding: 20px 0;
 	margin: 10px 0;
 	background-color: white;
+}
 
+.comp-col {
 	display: flex;
 	justify-content: center;
-	gap: px;
+	align-items: center;
+	flex-wrap: wrap;
+	
+	padding: 10px;
+}
+
+.comp-col:has(input) {
+	gap: 10px;
+}
+
+.comp-col input {
+	padding: 10px 5px 5px 5px;
+}
+
+.comp-col input[type='number'] {
+	width: 100px;
 }
