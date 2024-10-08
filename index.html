@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,13 @@
     <!-- Íconos bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
     <div class="pagina container-fluid bg-upao">
         <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
             <a href="#" class="navbar-brand">Calculadora UPAO</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -35,7 +38,8 @@
             <div class="row py-4">
                 <div class="col-md-6 d-flex flex-column align-items-left justify-content-center">
                     <h1>Calculadora UPAO</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quis voluptates autem dicta quos sed temporibus aliquam, ipsa officiis eveniet!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quis voluptates autem dicta
+                        quos sed temporibus aliquam, ipsa officiis eveniet!</p>
 
                 </div>
                 <div class="col-md-6 p-5">
@@ -47,72 +51,97 @@
         <div class="contenido container py-5 bg-light rounded">
             <h1 id="calculadora">Calculadora</h1>
 
-            <button class="btn btn-success" id="anadir-componente"><i class="bi bi-plus-lg"></i> Añadir componente</button>
+            <button class="btn btn-success" id="anadir-componente"><i class="bi bi-plus-lg"></i> Añadir
+                componente</button>
 
             <div class="lista-componentes p-3 my-3 bg-secondary">
 
                 <div class="componente row">
                     <!-- aqui va con un id unico -->
                     <div class="comp-col col-md-4">
-                        <input class="form-control" id="comp-nombre-012345" type="text" placeholder="Componente..." value="EVALUACIÓN DE PROCESO 1">
+                        <input class="form-control" id="comp-nombre-012345" type="text" placeholder="Componente..."
+                            value="EVALUACIÓN FINAL">
                     </div>
                     <div class="comp-col col-md-4">
-                        <input class="form-control" id="comp-porcentaje-012345" type="number" placeholder="Porcentaje..." value="25.00" min="0.00" max="100.00">
-                        <input class="form-control" id="comp-nota-012345" type="number" placeholder="Nota..." value="0.00" min="0.00" max="20.00">
+                        <input class="form-control" id="comp-porcentaje-012345" type="number"
+                            placeholder="Porcentaje..." value="25.00" min="0.00" max="100.00">
+                        <input class="form-control" id="comp-nota-012345" type="number" placeholder="Nota..."
+                            value="0.00" min="0.00" max="20.00">
                     </div>
                     <div class="comp-col col-md-4">
-                        <button class="btn btn-up btn-secondary" id="comp-subir-012345"><i class="bi bi-chevron-up"></i></button>
-                        <button class="btn btn-down btn-secondary" id="comp-bajar-012345"><i class="bi bi-chevron-down"></i></button>
-                        <button class="btn btn-danger" id="comp-eliminar-012345"><i class="bi bi-x-circle-fill"></i></button>
-                    </div>
-                </div>
-
-                <div class="componente row">
-                    <!-- aqui va con un id unico -->
-                    <div class="comp-col col-md-4">
-                        <input class="form-control" id="comp-nombre-012345" type="text" placeholder="Componente..." value="EVALUACIÓN PARCIAL">
-                    </div>
-                    <div class="comp-col col-md-4">
-                        <input class="form-control" id="comp-porcentaje-012345" type="number" placeholder="Porcentaje..." value="20.00" min="0.00" max="100.00">
-                        <input class="form-control" id="comp-nota-012345" type="number" placeholder="Nota..." value="0.00" min="0.00" max="20.00">
-                    </div>
-                    <div class="comp-col col-md-4">
-                        <button class="btn btn-up btn-secondary" id="comp-subir-012345"><i class="bi bi-chevron-up"></i></button>
-                        <button class="btn btn-down btn-secondary" id="comp-bajar-012345"><i class="bi bi-chevron-down"></i></button>
-                        <button class="btn btn-danger" id="comp-eliminar-012345"><i class="bi bi-x-circle-fill"></i></button>
-                    </div>
-                </div>
-                
-
-                <div class="componente row">
-                    <!-- aqui va con un id unico -->
-                    <div class="comp-col col-md-4">
-                        <input class="form-control" id="comp-nombre-012345" type="text" placeholder="Componente..." value="EVALUACIÓN DE PROCESO 2">
-                    </div>
-                    <div class="comp-col col-md-4">
-                        <input class="form-control" id="comp-porcentaje-012345" type="number" placeholder="Porcentaje..." value="30.00" min="0.00" max="100.00">
-                        <input class="form-control" id="comp-nota-012345" type="number" placeholder="Nota..." value="0.00" min="0.00" max="20.00">
-                    </div>
-                    <div class="comp-col col-md-4">
-                        <button class="btn btn-up btn-secondary" id="comp-subir-012345"><i class="bi bi-chevron-up"></i></button>
-                        <button class="btn btn-down btn-secondary" id="comp-bajar-012345"><i class="bi bi-chevron-down"></i></button>
-                        <button class="btn btn-danger" id="comp-eliminar-012345"><i class="bi bi-x-circle-fill"></i></button>
+                        <button onclick="subir(this)" class="btn btn-up btn-secondary" id="comp-subir-012345"><i
+                                class="bi bi-chevron-up"></i></button>
+                        <button onclick="bajar(this)" class="btn btn-down btn-secondary" id="comp-bajar-012345"><i
+                                class="bi bi-chevron-down"></i></button>
+                        <button onclick="eliminar(this)" class="btn btn-danger" id="comp-eliminar-012345"><i
+                                class="bi bi-x-circle-fill"></i></button>
                     </div>
                 </div>
 
                 <div class="componente row">
                     <!-- aqui va con un id unico -->
                     <div class="comp-col col-md-4">
-                        <input class="form-control" id="comp-nombre-012345" type="text" placeholder="Componente..." value="EVALUACIÓN FINAL">
+                        <input class="form-control" id="comp-nombre-012345" type="text" placeholder="Componente..."
+                            value="EVALUACIÓN FINAL">
                     </div>
                     <div class="comp-col col-md-4">
-                        <input class="form-control" id="comp-porcentaje-012345" type="number" placeholder="Porcentaje..." value="25.00" min="0.00" max="100.00">
-                        <input class="form-control" id="comp-nota-012345" type="number" placeholder="Nota..." value="0.00" min="0.00" max="20.00">
+                        <input class="form-control" id="comp-porcentaje-012345" type="number"
+                            placeholder="Porcentaje..." value="25.00" min="0.00" max="100.00">
+                        <input class="form-control" id="comp-nota-012345" type="number" placeholder="Nota..."
+                            value="0.00" min="0.00" max="20.00">
                     </div>
                     <div class="comp-col col-md-4">
-                        <button class="btn btn-up btn-secondary" id="comp-subir-012345"><i class="bi bi-chevron-up"></i></button>
-                        <button class="btn btn-down btn-secondary" id="comp-bajar-012345"><i class="bi bi-chevron-down"></i></button>
-                        <button class="btn btn-danger" id="comp-eliminar-012345"><i class="bi bi-x-circle-fill"></i></button>
+                        <button onclick="subir(this)" class="btn btn-up btn-secondary" id="comp-subir-012345"><i
+                                class="bi bi-chevron-up"></i></button>
+                        <button onclick="bajar(this)" class="btn btn-down btn-secondary" id="comp-bajar-012345"><i
+                                class="bi bi-chevron-down"></i></button>
+                        <button onclick="eliminar(this)" class="btn btn-danger" id="comp-eliminar-012345"><i
+                                class="bi bi-x-circle-fill"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="componente row">
+                    <!-- aqui va con un id unico -->
+                    <div class="comp-col col-md-4">
+                        <input class="form-control" id="comp-nombre-012345" type="text" placeholder="Componente..."
+                            value="EVALUACIÓN FINAL">
+                    </div>
+                    <div class="comp-col col-md-4">
+                        <input class="form-control" id="comp-porcentaje-012345" type="number"
+                            placeholder="Porcentaje..." value="25.00" min="0.00" max="100.00">
+                        <input class="form-control" id="comp-nota-012345" type="number" placeholder="Nota..."
+                            value="0.00" min="0.00" max="20.00">
+                    </div>
+                    <div class="comp-col col-md-4">
+                        <button onclick="subir(this)" class="btn btn-up btn-secondary" id="comp-subir-012345"><i
+                                class="bi bi-chevron-up"></i></button>
+                        <button onclick="bajar(this)" class="btn btn-down btn-secondary" id="comp-bajar-012345"><i
+                                class="bi bi-chevron-down"></i></button>
+                        <button onclick="eliminar(this)" class="btn btn-danger" id="comp-eliminar-012345"><i
+                                class="bi bi-x-circle-fill"></i></button>
+                    </div>
+                </div>
+
+                <div class="componente row">
+                    <!-- aqui va con un id unico -->
+                    <div class="comp-col col-md-4">
+                        <input class="form-control" id="comp-nombre-012345" type="text" placeholder="Componente..."
+                            value="EVALUACIÓN FINAL">
+                    </div>
+                    <div class="comp-col col-md-4">
+                        <input class="form-control" id="comp-porcentaje-012345" type="number"
+                            placeholder="Porcentaje..." value="25.00" min="0.00" max="100.00">
+                        <input class="form-control" id="comp-nota-012345" type="number" placeholder="Nota..."
+                            value="0.00" min="0.00" max="20.00">
+                    </div>
+                    <div class="comp-col col-md-4">
+                        <button onclick="subir(this)" class="btn btn-up btn-secondary" id="comp-subir-012345"><i
+                                class="bi bi-chevron-up"></i></button>
+                        <button onclick="bajar(this)" class="btn btn-down btn-secondary" id="comp-bajar-012345"><i
+                                class="bi bi-chevron-down"></i></button>
+                        <button onclick="eliminar(this)" class="btn btn-danger" id="comp-eliminar-012345"><i
+                                class="bi bi-x-circle-fill"></i></button>
                     </div>
                 </div>
 
@@ -123,12 +152,15 @@
                 <p class="display-2 mx-5 text-danger" id="promedio-final">0.00</p>
             </div>
 
-            <button class="btn btn-danger d-block mx-auto my-5" id="restaurar-lista"><i class="bi bi-exclamation-octagon-fill"></i> Restaurar lista</button>
+            <button class="btn btn-danger d-block mx-auto my-5" id="restaurar-lista"><i
+                    class="bi bi-exclamation-octagon-fill"></i> Restaurar lista</button>
         </div>
     </div>
-    
+
+    <script src="./js/script.js"></script>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/popper.min.js"></script>
 </body>
+
 </html>
