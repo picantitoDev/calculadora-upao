@@ -11,9 +11,14 @@ nav li {
 	text-align: center;
 }
 
+#anadir-componente {
+	display: block;
+	margin-left: auto;
+}
+
 .componente {
 	padding: 20px 0;
-	margin: 10px 0;
+	margin: 10px 10px;
 	background-color: white;
 }
 
@@ -22,18 +27,36 @@ nav li {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 10px;
 	
 	padding: 10px;
 }
 
-.comp-col:has(input) {
-	gap: 10px;
+.btn-up, .btn-down {
+	width: 80px;
+	height: 40px;
 }
 
 .comp-col input {
 	padding: 10px 5px 5px 5px;
 }
 
+.comp-col input[type='text'] {
+	width: 100%;
+}
+
+.comp-col:has(input[type='number']) {
+	flex-wrap: nowrap;
+	overflow: hidden;
+}
+
 .comp-col input[type='number'] {
-	width: 100px;
+	width:inherit;
+	max-width: 110px;
+}
+
+@media (max-width: 767.98px) { 
+	#anadir-componente {
+		margin: auto;
+	}
 }
