@@ -18,7 +18,7 @@ nav li {
 
 .componente {
 	padding: 20px 0;
-	margin: 10px 0;
+	margin: 10px 10px;
 	background-color: white;
 }
 
@@ -31,6 +31,7 @@ nav li {
 	
 	padding: 10px;
 }
+
 .btn-up, .btn-down {
 	width: 80px;
 	height: 40px;
