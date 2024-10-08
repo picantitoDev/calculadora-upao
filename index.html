@@ -50,6 +50,7 @@
             <button class="btn btn-success" id="anadir-componente"><i class="bi bi-plus-lg"></i> Añadir componente</button>
 
             <div class="lista-componentes p-3 my-5 bg-secondary">
+
                 <div class="componente row">
                     <!-- aqui va con un id unico -->
                     <div class="comp-col col-md-4">
@@ -60,11 +61,14 @@
                         <input id="comp-nota-012345" type="number" placeholder="Nota...">
                     </div>
                     <div class="comp-col col-md-4">
+                        <div class="up-down">
+                            <button class="btn btn-up btn-secondary"  id="comp-subir-012345"><i class="bi bi-chevron-up"></i></button>
+                            <button class="btn btn-down btn-secondary" id="comp-bajar-012345"><i class="bi bi-chevron-down"></i></button>
+                        </div>
                         <button class="btn btn-danger" id="comp-eliminar-012345"><i class="bi bi-x-circle-fill"></i></button>
-                        <button class="btn btn-secondary"  id="comp-subir-012345"><i class="bi bi-chevron-up"></i></button>
-                        <button class="btn btn-secondary" id="comp-bajar-012345"><i class="bi bi-chevron-down"></i></button>
                     </div>
                 </div>
+
             </div>
 
             <p>Promedio final:</p><p id="promedio-final">20</p>
