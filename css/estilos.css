@@ -1,3 +1,4 @@
+
 .bg-upao {
 	background-color: rgb(0, 86, 163);
 }
@@ -37,6 +38,12 @@ nav li {
 	width: 100%;
 }
 
+.comp-col:has(input[type='number']) {
+	flex-wrap: nowrap;
+	overflow: hidden;
+}
+
 .comp-col input[type='number'] {
-	width: 100px;
+	width:inherit;
+	max-width: 110px;
 }
